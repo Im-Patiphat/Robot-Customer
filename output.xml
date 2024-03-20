@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-20T18:00:16.004146" rpa="false" schemaversion="5">
+<suite id="s1" name="Google Search" source="D:\work\T-Narupon\Test-Robot\google_search.robot">
+<test id="s1-t1" name="FromCustomer and Verify Results-1" line="25">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:16.183736" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:16.183736" elapsed="1.707612"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:16.183736" elapsed="1.708613"/>
+</kw>
+<kw name="Input Search Term-1">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:17.893341" level="INFO">Typing text 'johnjohn' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:17.893341" elapsed="0.095775"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:17.989116" level="INFO">Typing text 'canonc' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:17.989116" elapsed="0.081796"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:18.070912" level="INFO">Typing text '2' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:18.070912" elapsed="0.090426"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:17.892349" elapsed="0.268989"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:18.161338" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:18.502898" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:18.503423" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:18.161338" elapsed="0.350386"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:18.161338" elapsed="0.350936"/>
+</kw>
+<kw name="Verify Results-1">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:18.528733" level="INFO">${result} = First Name:johnjohn</msg>
+<var>${result}</var>
+<arg>id=firstname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:18.512809" elapsed="0.015924"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${First_Name}${Name_1}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:18.529078" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:18.512274" elapsed="0.017308"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:18.529582" elapsed="2.174809"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:16.183736" elapsed="4.520655"/>
+</test>
+<test id="s1-t2" name="FromCustomer and Verify Results-2" line="32">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:20.704391" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:20.704391" elapsed="1.678141"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:20.704391" elapsed="1.678141"/>
+</kw>
+<kw name="Input Search Term-2">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:22.385150" level="INFO">Typing text 'Johnj' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.385068" elapsed="0.110214"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:22.495282" level="INFO">Typing text 'canoncanoncano' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.495282" elapsed="0.083237"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:22.578519" level="INFO">Typing text '149' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>149</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.578519" elapsed="0.062518"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:22.384518" elapsed="0.256519"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:22.641037" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:22.962220" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:22.962220" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.641037" elapsed="0.326126"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:22.641037" elapsed="0.326126"/>
+</kw>
+<kw name="Verify Results-2">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:22.984813" level="INFO">${result} = First Name:Johnj</msg>
+<var>${result}</var>
+<arg>id=firstname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.967163" elapsed="0.017650"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${First_Name}${Name_2}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.984813" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:22.967163" elapsed="0.017650"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:22.984813" elapsed="2.090978"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:20.704391" elapsed="4.371400"/>
+</test>
+<test id="s1-t3" name="FromCustomer and Verify Results-3" line="39">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:25.075791" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:25.075791" elapsed="1.644839"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:25.075791" elapsed="1.644839"/>
+</kw>
+<kw name="Input Search Term-3">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:26.722627" level="INFO">Typing text 'johnjo' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:26.721629" elapsed="0.092359"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:26.813988" level="INFO">Typing text 'canoncanoncanon' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:26.813988" elapsed="0.090233"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:26.904221" level="INFO">Typing text '150' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>150</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:26.904221" elapsed="0.062483"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:26.721629" elapsed="0.245075"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:26.966704" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:27.281438" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:27.281438" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:26.966704" elapsed="0.314734"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:26.966704" elapsed="0.314734"/>
+</kw>
+<kw name="Verify Results-3">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:27.302200" level="INFO">${result} = First Name:johnjo</msg>
+<var>${result}</var>
+<arg>id=firstname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:27.281438" elapsed="0.021763"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${First_Name}${Name_3}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:27.303201" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:27.281438" elapsed="0.021763"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:27.303201" elapsed="2.090842"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:25.075791" elapsed="4.318252"/>
+</test>
+<test id="s1-t4" name="FromCustomer and Verify Results-4" line="46">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:29.394043" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:29.394043" elapsed="1.646231"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:29.394043" elapsed="1.646537"/>
+</kw>
+<kw name="Input Search Term-4">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:31.040580" level="INFO">Typing text 'Johnjohnjohnjo' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_4}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.040580" elapsed="0.138541"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:31.179121" level="INFO">Typing text 'canoncan' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_4_5_6_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.179121" elapsed="0.135849"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:31.314970" level="INFO">Typing text '75' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>75</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.314970" elapsed="0.066903"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:31.040580" elapsed="0.341293"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:31.383031" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:31.714189" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:31.714189" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.381873" elapsed="0.335226"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:31.381873" elapsed="0.335226"/>
+</kw>
+<kw name="Verify Results-4">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:31.734633" level="INFO">${result} = First Name:Johnjohnjohnjo</msg>
+<var>${result}</var>
+<arg>id=firstname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.717099" elapsed="0.017534"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${First_Name}${Name_4}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.735638" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:31.717099" elapsed="0.018539"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:31.735638" elapsed="2.091627"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:29.394043" elapsed="4.433222"/>
+</test>
+<test id="s1-t5" name="FromCustomer and Verify Results-5" line="53">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:33.827265" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:33.827265" elapsed="1.648040"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:33.827265" elapsed="1.649039"/>
+</kw>
+<kw name="Input Search Term-5">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:35.477301" level="INFO">Typing text 'johnjohnjohnjoh' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_5}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:35.477301" elapsed="0.121699"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:35.599000" level="INFO">Typing text 'canoncan' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_4_5_6_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:35.599000" elapsed="0.082760"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:35.681760" level="INFO">Typing text '75' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>75</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:35.681760" elapsed="0.062524"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:35.476304" elapsed="0.267980"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:35.744284" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:36.076859" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:36.077876" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:35.744284" elapsed="0.334448"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:35.744284" elapsed="0.334448"/>
+</kw>
+<kw name="Verify Results-5">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:36.099655" level="INFO">${result} = First Name:johnjohnjohnjoh</msg>
+<var>${result}</var>
+<arg>id=firstname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:36.078732" elapsed="0.020923"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${First_Name}${Name_5}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:36.099655" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:36.078732" elapsed="0.020923"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:36.100663" elapsed="2.089398"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:33.827265" elapsed="4.362796"/>
+</test>
+<test id="s1-t6" name="FromCustomer and Verify Results-6" line="60">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:38.190061" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:38.190061" elapsed="1.633612"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:38.190061" elapsed="1.634610"/>
+</kw>
+<kw name="Input Search Term-6">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:39.824671" level="INFO">Typing text 'John' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_6}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:39.824671" elapsed="0.087392"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:39.912063" level="INFO">Typing text 'canoncan' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_4_5_6_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:39.912063" elapsed="0.076120"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:39.988183" level="INFO">Typing text '75' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>75</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:39.988183" elapsed="0.062288"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:39.824671" elapsed="0.225800"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:40.050471" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:40.397982" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:40.397982" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:40.050471" elapsed="0.356565"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:40.050471" elapsed="0.356565"/>
+</kw>
+<kw name="Verify Results-6">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:40.424456" level="INFO">${result} = Customer Detail</msg>
+<var>${result}</var>
+<arg>id=fromname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:40.407036" elapsed="0.017420"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${Customer}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:40.424456" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:40.407036" elapsed="0.017420"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:40.424456" elapsed="2.122937"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:38.190061" elapsed="4.357332"/>
+</test>
+<test id="s1-t7" name="FromCustomer and Verify Results-8" line="67">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:42.547393" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:42.547393" elapsed="1.605987"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:42.547393" elapsed="1.606045"/>
+</kw>
+<kw name="Input Search Term-8">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:44.155705" level="INFO">Typing text 'johnjohn' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_8_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.155705" elapsed="0.109228"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:44.264933" level="INFO">Typing text 'cano' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_8}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.264933" elapsed="0.118059"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:44.382992" level="INFO">Typing text '75' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>75</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.382992" elapsed="0.062540"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:44.154707" elapsed="0.290825"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:44.445532" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:44.750877" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:44.750877" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.445532" elapsed="0.312511"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:44.445532" elapsed="0.312511"/>
+</kw>
+<kw name="Verify Results-8">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:44.782841" level="INFO">${result} = Customer Detail</msg>
+<var>${result}</var>
+<arg>id=fromname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.758043" elapsed="0.024798"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${Customer}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.782841" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:44.758043" elapsed="0.024798"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:44.783865" elapsed="2.071673"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:42.547393" elapsed="4.308145"/>
+</test>
+<test id="s1-t8" name="FromCustomer and Verify Results-10" line="74">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:46.855538" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:46.855538" elapsed="1.664486"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:46.855538" elapsed="1.664486"/>
+</kw>
+<kw name="Input Search Term-10">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:48.521025" level="INFO">Typing text 'johnjohn' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_8_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:48.521025" elapsed="0.104983"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:48.626008" level="INFO">Typing text 'canoncan' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_4_5_6_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:48.626008" elapsed="0.077916"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:48.703924" level="INFO">Typing text '0' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:48.703924" elapsed="0.053974"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:48.520024" elapsed="0.237874"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:48.757898" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:49.075361" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:49.075361" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:48.757898" elapsed="0.319590"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:48.757898" elapsed="0.319590"/>
+</kw>
+<kw name="Verify Results-10">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:49.103971" level="INFO">${result} = Customer Detail</msg>
+<var>${result}</var>
+<arg>id=fromname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:49.077488" elapsed="0.026483"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${Customer}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:49.103971" elapsed="0.000899"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:49.077488" elapsed="0.027382"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:49.105888" elapsed="2.112623"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:46.855538" elapsed="4.362973"/>
+</test>
+<test id="s1-t9" name="FromCustomer and Verify Results-11" line="81">
+<kw name="Open FromCustomer">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:51.218511" level="INFO">Opening browser 'Chrome' to base url 'http://localhost/web/'.</msg>
+<arg>http://localhost/web/</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-20T18:00:51.218511" elapsed="1.597566"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:51.218511" elapsed="1.597566"/>
+</kw>
+<kw name="Input Search Term-11">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:52.818080" level="INFO">Typing text 'johnjohn' into text field 'id=firstname'.</msg>
+<arg>id=firstname</arg>
+<arg>${Name_8_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:52.817077" elapsed="0.128069"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:52.945146" level="INFO">Typing text 'canoncan' into text field 'id=lastname'.</msg>
+<arg>id=lastname</arg>
+<arg>${Lastname_4_5_6_10_11}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:52.945146" elapsed="0.086439"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:53.031585" level="INFO">Typing text '151' into text field 'id=age'.</msg>
+<arg>id=age</arg>
+<arg>151</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:53.031585" elapsed="0.059557"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:52.816077" elapsed="0.275065"/>
+</kw>
+<kw name="Press Enter Google Search">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:53.098912" level="INFO">Sending key(s) ('ENTER',) to id=submit element.</msg>
+<msg time="2024-03-20T18:00:53.422349" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-03-20T18:00:53.422349" level="INFO">Releasing special key ENTER.</msg>
+<arg>id=submit</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:53.098618" elapsed="0.332612"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:53.097989" elapsed="0.333241"/>
+</kw>
+<kw name="Verify Results-11">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-20T18:00:53.452009" level="INFO">${result} = Customer Detail</msg>
+<var>${result}</var>
+<arg>id=fromname</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-20T18:00:53.431230" elapsed="0.020779"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${Customer}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-20T18:00:53.452009" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:53.431230" elapsed="0.020779"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-20T18:00:53.452009" elapsed="2.136180"/>
+</kw>
+<status status="PASS" start="2024-03-20T18:00:51.218511" elapsed="4.369678"/>
+</test>
+<status status="PASS" start="2024-03-20T18:00:16.011654" elapsed="39.576535"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="Google Search">Google Search</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
